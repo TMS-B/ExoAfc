@@ -1,6 +1,6 @@
 body{
     background-color: rgb(255, 255, 255);
-     font-family: "Roboto";     /*system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',  Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
+     font-family: "Roboto", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',  Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     margin: 0;
     padding: 0;
 }
@@ -15,7 +15,7 @@ header{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #002864ad;
+    background-color: #012058b9;
 }
 .navfix{
     display: flex;
@@ -55,11 +55,11 @@ ul{
     margin: 0;
 }
 
-ul li{
-    color: #d8dadf;
+header ul li{
+    color: #eeeeee;
 }
 
-ul li:hover{
+header ul li:hover{
     color: #aaaaaa;
 } 
 
@@ -68,8 +68,8 @@ input{
     width: 150px;
     border-radius: 5px;
     background: rgb(255, 255, 255, 0);
-    border: solid 1px #d8dadf;
-    color: #d8dadf;
+    border: solid 1px rgb(216, 218, 223);
+    color: #eeeeee;
     font-weight: bold;
 }
 
@@ -84,13 +84,14 @@ nav{
     padding-top: 20px;
     display: flex; 
     width: 1200px;
-    color: #d8dadf;
+    color: #eeeeee;
     font-size: 13px;
 }
 
 h1{
-    color: #d8dadf;
+    color: #eeeeee;
     text-align: center;
+    margin-top: 120px;
 }
 
 #head{
@@ -100,10 +101,10 @@ h1{
     align-items: center;
     flex-direction: column;
     flex-wrap: wrap;
-    width: 36%;
+    width: 40%;
     border-radius: 0 0 10px 50px;
-    margin: 45px;
-    height: 200px;
+    margin: 57px auto 57px auto;
+    height: 167px;
 
 }
 
@@ -112,18 +113,22 @@ h1{
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    width: 80%;
+    width: 78%;
+}
+
+#head span{
+    color: #365da4;
+    font-weight: bold;
 }
 
 .search-bar {
     display: flex;
-    margin: 20px;
+    margin: -10px;
     width: 80%;
 }
 
 .search-bar input[type="text"] {
     height: 40px;
-    /* width: 300px; */
     flex: 1;
     color: black;
     border-radius: 5px 0 0 5px;
@@ -132,19 +137,26 @@ h1{
 }
 
 .search-bar input[type="button"] {
-    height: 40px;
-    width: 150px;
+    /* height: 40px;
+    width: 150px; */
     border-radius: 0 5px 5px 0; 
     border: 1px solid #365da4; 
     border: none;
     background-color: #365da4;
-    color: #e4e4e4; 
+    color: #f0f0f0; 
     cursor: pointer;
     transition: border-color 0.3s ease;
+    font-weight: bold;
 }
 
 .search-bar input[type="button"]:hover {
-    background-color: rgba(255, 255, 255, 0.11);
+    background-color: #365ca4c4;
+}
+
+::placeholder{
+    color: black;
+    opacity: 0.7;
+    font-size: 11px;
 }
 
 h2{
@@ -221,11 +233,73 @@ section{
     align-items: center;
 }
 
-footer{
+#Counter {
+    display: flex;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+}
+#Counter > div {
     display: flex;
     flex-direction: column;
-    background-color: #00163D;
+    align-items: center;
+    margin: 80px;
 }
+#Counter > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 80px;
+    counter-reset: compteurCSS;
+   
+}
+
+@property --num {
+    syntax: '<integer>';
+    initial-value: 0;
+    inherits: false;
+}
+#Counter > div > span:nth-child(1) {
+    font-size: 50px;
+    font-weight: bolder;
+    color:#365DA4;
+    margin-bottom: 15px;
+
+    counter-reset: num var(--num);
+
+    transition: --num 5s ease-in-out;
+}
+#Counter > div > span:nth-child(1)::after {
+    content: counter(num);
+}
+#Counter:hover #CompteurCentres{
+    --num: 24;
+}
+#Counter:hover #CompteurRecommandation{
+    --num: 90;
+}
+#Counter:hover #CompteurCertification{
+    --num: 90;
+}
+#Counter:hover #CompteurExperience{
+    --num: 45;
+}
+#Counter > div > span:nth-child(2) {
+    font-size: 18px;
+    text-align: center;
+    width: 150px;
+}
+
+footer{
+    display: flex;
+    /* flex-direction: column; */
+    background-color: #00163D;
+    justify-content: center;
+    border-top-right-radius: 200px;
+    color: white;
+}
+
 
 #rec{
     display: flex;
@@ -234,10 +308,44 @@ footer{
 
 .titleb{
     color: #e4e4e4;
-    font-size: 18px;
+    font-size: 16px;
+    font-weight: bold;
 }
 
 .ft{
     display: flex;
     flex-direction: column;
+    margin: 50px;
+    border-spacing: 5px;
+}
+
+.ft *{
+    margin-bottom: 20px;
+}
+
+.row{
+    flex-direction: column;
+    line-height: 30px;
+    font-size: 13px;
+}
+
+#rs{
+    padding: 0 10px 0 10px;
+}
+
+#bj{
+    color: #365da4;
+    background-color: white;
+    width: 205px;
+}
+
+#bj:hover{
+    color: white;
+    background-color: #00163D;
+}
+
+#calio{
+    width: 200px;
+    height: 150px;
+    
 }

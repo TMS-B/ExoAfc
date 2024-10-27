@@ -16,7 +16,7 @@
                 <div class="menu">
                     <ul>
                         <li>Le groupe Afec</li>
-                        <li>Formations</li>
+                        <li><u>Formations</u></li>
                         <li>Campus</li>
                         <li>Financement</li>
                         <li>Espace Candidats</li>
@@ -27,17 +27,18 @@
                 </div>
             </div>
             <nav>
-                <span>Accueil > Formations</span>
+                <span><u>Accueil </u>> Formations</span>
             </nav>
             <h1>Découvrez toutes nos formations et <br>certifications - Page 1</h1>
             <section id="head">
                 <div>
                     <h3>Vous recherchez une formation :</h3>
-                    <span>Afficher plus de filtres</span>
+                    <img src="./img/sliders2.svg" alt="filtres de recherche">
+                    <span>  Afficher plus de filtres</span>
                 </div>
                 <div class="search-bar">
                     <input id="search" type="text" placeholder="Recherchez une formation..." />
-                    <input type="button" value="Rechercher" />
+                    <input type="button" value="RECHERCHER" />
                 </div>
             </section>
         </header>
@@ -155,33 +156,48 @@
                 </div>
             </div>
         </section>
-        <section>
-
+        <section id="Counter">
+            <div>
+                <span id="CompteurCentres"></span>
+                <span>Centres</span>
+            </div>
+            <div>
+                <span id="CompteurRecommandation"></span>
+                <span>Taux de recommandation</span>
+            </div>
+            <div>
+                <span id="CompteurCertification"></span>
+                <span>Taux de certification</span>
+            </div>
+            <div>
+                <span id="CompteurExperience"></span>
+                <span>ans d'expérience</span>
+            </div>
         </section>
     </main>
     <footer>
-        <div id="rec">
-            <span class="titleb"><b>Restons en contact</b></span>
-            <input type="button" value="NOUS CONTACTER" />
-            <div>
+        <div class="ft">
+            <span class="titleb"><b>RESTONS EN CONTACT</b></span>
+            <input id="bj" type="button" value="NOUS CONTACTER" />
+            <div >
                 <img src="./img/facebook.svg" alt="fb">
-                <img src="./img/linkedin.svg" alt="linkedin">
+                <img id="rs" src="./img/linkedin.svg" alt="linkedin">
                 <img src="./img/AFEC_Picto_Instagram.svg" alt="insta">
             </div>
-            <img width="200px" height="150px" src="./img/LogoQualiopi.png" alt="qualiopi">
-            <span>Afficher notre certification</span>
+            <img id="calio" src="./img/LogoQualiopi.png" alt="qualiopi">
+            <span><u>Afficher notre certification</u></span>
         </div>
         <div class="ft">
-            <span class="titleb">Groupe Afec</span>
-            <ul>
+            <span class="titleb">GROUPE AFEC</span>
+            <ul class="row">
                 <li>Formations</li>
                 <li>Centres de formation</li>
                 <li>Offres d'emploi</li>
             </ul>
         </div>
         <div class="ft">
-            <span class="titleb">Prestations</span>
-            <ul>
+            <span class="titleb">PRESTATIONS</span>
+            <ul class="row">
                 <li>Évaluations certifications</li>
                 <li>Accompagnement VAE</li>
                 <li>Formations en alternance</li>
@@ -189,8 +205,8 @@
             </ul>
         </div>
         <div class="ft">
-            <span class="titleb">A propos</span>
-            <ul>
+            <span class="titleb">A PROPOS</span>
+            <ul class="row">
                 <li>Talent School</li>
                 <li>L’AFEC</li>
                 <li>Point F</li>
@@ -198,8 +214,8 @@
             </ul>
         </div>
         <div class="ft">
-            <span class="titleb">Ressources</span>
-            <ul>
+            <span class="titleb">RESSOURCES</span>
+            <ul class="row">
                 <li>Grille tarifaire</li>
                 <li>CGU</li>
                 <li>CGV</li>
