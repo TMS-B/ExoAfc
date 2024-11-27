@@ -1,0 +1,66 @@
+body{
+    margin: none;
+    background-color: #d2232a;
+}
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #58595b;
+    color: white;
+    margin: 20px;
+    border-radius: 10px;
+    border: solid 3px black;
+}
+header h1{
+    font-size: 30px;
+    -webkit-text-fill-color: #FFCC00;
+    -webkit-text-stroke: 0.5px #365CA8;
+    
+}
+header h2 {
+    font-size: 25px;
+    -webkit-text-fill-color: #FFCC00;
+    -webkit-text-stroke: 0.5px #365CA8;
+}
+header input {
+    margin: 10px;
+    height: 30px;
+    width: 200px;
+    border-radius: 10px;
+    border: solid 3px black;
+}
+input:focus{
+    outline: none;
+}
+main{
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    background-color: green;
+    color: white;
+    border: solid 3px black;
+}
+button{
+    width: 100px;
+    border-radius: 10px;
+    border: solid 3px black;
+}
+main #pokemonList{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(20, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 20px;
+    width: 100%;
+    border-radius: 10px;
+}
+/* #pokemonList{
+    border: solid 1px black; 
+} */
+.headTab{
+    width: 25%;
+}
