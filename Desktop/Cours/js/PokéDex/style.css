@@ -1,5 +1,5 @@
 body{
-    margin: none;
+    margin: 0;
     background-color: #d2232a;
 }
 header{
@@ -16,13 +16,17 @@ header{
 header h1{
     font-size: 30px;
     -webkit-text-fill-color: #FFCC00;
-    -webkit-text-stroke: 0.5px #365CA8;
+    -webkit-text-stroke: 1px #365CA8;
+    font-weight: bold;
+    font-family: sans-serif;
     
 }
 header h2 {
     font-size: 25px;
     -webkit-text-fill-color: #FFCC00;
-    -webkit-text-stroke: 0.5px #365CA8;
+    -webkit-text-stroke: 1px #365CA8;
+    font-weight: bold;
+    font-family: sans-serif;
 }
 header input {
     margin: 10px;
@@ -49,18 +53,19 @@ button{
     border-radius: 10px;
     border: solid 3px black;
 }
-main #pokemonList{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(20, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 20px;
+.pokemonRow{
+    display: flex;
     width: 100%;
     border-radius: 10px;
+    margin: 20px 0 20px 0;
 }
-/* #pokemonList{
-    border: solid 1px black; 
-} */
-.headTab{
+.pokemonRow div{
     width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pokemonRow img{
+    width: 100px;
+    aspect-ratio: 1/1;
 }

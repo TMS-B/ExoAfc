@@ -4,7 +4,7 @@ rechercher un pokemon via une searchbar, à la recherche du nom complet -->
 s'il existe --> afficher sa page (try)
 sinon --> erreur (catch)
 
-ajouter bouton favoris sur chacune des fiches 
+ajouter bouton favoris sur chacune des fiches --> liste paginer
 --> ajouter un onglet avc tous les fav
 --> retirer un favoris
 
@@ -16,17 +16,35 @@ let best = document.getElementById("favorite");
 let pokemon_list = document.getElementById("pokemonList");
 let pokemon_result = document.getElementById("pokemonResult")
 
-const fighter = {
-    
+
+async function showPokemon(){
+    let colonneContainer = document.createElement("div");
+    const data = await searchPokemon();
+    for(let i = 0; i < 20; i++){
+        let colonneContainer = document.createElement("div");
+        colonneContainer.innerHTML = 
+        `<div class= "favorite"></div>
+        <div class= "id">${data[i].id}</div>
+        <div class= "image"><img src="${data[i].image}" alt="${data[i].name}"/></div>
+        <div class= "name">${data[i].name}</div>
+        <div class= "description">${data[i].apiTypes[0].name}</div>`;
+        colonneContainer.className = "pokemonRow"
+        pokemon_list.appendChild(colonneContainer);
+
+        
+    }
 }
 
-function searchPokemon() {
-    fetch("./pokemon.json")
-        .then (res => res.json())
-        .then (json => console.log(JSON.stringify(json)))
-        .catch ();
+async function searchPokemon() {
+    try {
+        const res = await fetch("./pokemon.json");
+        const json = await res.json();
+        return json; // Retourner l'objet JSON directement
+    } catch (error) {
+        console.error("Erreur lors du chargement du fichier JSON", error);
+    }
 }
-searchPokemon()
+showPokemon();
 
 // async function searchPokemon(e) {
 //     e.preventDefault();
