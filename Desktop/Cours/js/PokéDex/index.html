@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="main.js" defer></script>
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <link rel="icon" href="./image/favicon-16x16.png">
+    <title>Pokédex</title>
 </head>
 <body>
     <header>
@@ -14,25 +15,25 @@
         <input id="searchBar" type="text" placeholder="Rechercher un Pokémon">
     </header>
     <main>
+        <div id="favorite">
+            <button >Mes Favoris</button>
+        </div>
+        <div id="prevNext">
+            <button id="previousBtn">Précédent</button>
+            <button id="nextBtn">Suivant</button> 
+        </div>
         <div id="pokemonList">
             <div class="pokemonRow">
                 <div class="id">N°</div>
-                <div class="image">Img. <!--donner variables pour creer dynamiquement des elements js -->
-                </div>
+                <div class="image">Img.</div>
                 <div class="name">Pokémon</div>
                 <div class="description">Type</div>
             </div>
         </div>
         <div>
-            <button id="favorite">Mes Favoris</button>
-        </div>
-        <button class="prevNext">Précédent</button>
-        <button class="prevNext">Suivant</button>
-        <div id="pokemonResult">
+            <button id="previousBtn">Précédent</button>
+            <button id="nextBtn">Suivant</button> 
         </div>
     </main>
-    <footer>
-
-    </footer>
 </body>
 </html>

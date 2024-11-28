@@ -49,9 +49,13 @@ main{
     border: solid 3px black;
 }
 button{
+    display: flex;
+    flex-direction: row;
     width: 100px;
     border-radius: 10px;
+    background-color: #58595b;
     border: solid 3px black;
+    color: white;
 }
 .pokemonRow{
     display: flex;
